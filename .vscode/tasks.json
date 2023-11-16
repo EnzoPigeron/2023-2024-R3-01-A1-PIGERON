@@ -1,0 +1,21 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Edge + Fichier Courrant",
+           "type": "shell",
+            "command": "MicrosoftEdge",
+            "args": [
+                "http://localhost/2023-2024-R3-01-A1-PIGERON/index.php"
+            
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+        
+    ]
+}
