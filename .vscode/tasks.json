@@ -8,7 +8,9 @@
            "type": "shell",
             "command": "MicrosoftEdge",
             "args": [
-                "localhost/2023-2024-R3-01-A1-PIGERON/index.php"
+
+                "http://localhost/2023-2024-R3-01-A1-PIGERON/index.php"
+
             
             ],
             "group": {
