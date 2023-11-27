@@ -4,6 +4,10 @@
      */
     abstract class Model {
         private PDO $db;
+
+        public function __construct() {
+            $this->getDB();
+        }
         
         /**
          * Exécute la requête SQL
@@ -27,7 +31,7 @@
          */
         private function getDB() : PDO {
             if ($this->db === null) {
-                $this->db = new PDO("mysql:host=localhost;dbname=sae3_soupape;charset=utf8", "root", "");
+                $this->db = new PDO("mysql:host=localhost;dbname==pokedex;charset=utf8", "root", "");
             }
             return $this->db;
         }
