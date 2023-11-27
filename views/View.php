@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Class View
  */
 class View {
     private $fichier;
