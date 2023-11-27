@@ -18,9 +18,9 @@
         protected function execRequest(string $sql, array $params = null) : PDOStatement|false {
             $statement = $this->db->prepare($sql);
             if ($params == null) {
-                $statement = $statement->execute();
+                $statement->execute();
             } else {
-                $statement = $statement->execute($params);
+                $statement->execute($params);
             }           
             return $statement;
         }
@@ -30,8 +30,8 @@
          * @return PDO renvoie l'objet PDO
          */
         private function getDB() : PDO {
-            if ($this->db === null) {
-                $this->db = new PDO("mysql:host=localhost;dbname==pokedex;charset=utf8", "root", "");
+            if (!isset($this->db)) {
+                $this->db = new PDO("mysql:host=localhost;dbname=pokedex;charset=utf8", "root", "");
             }
             return $this->db;
         }
