@@ -36,17 +36,19 @@
                 <th>Description</th>
                 <th>Type(s)</th>
                 <th>Image</th>
+                <th>Option</th>
             </tr>
             <?php
             foreach ($listPokemon as $pokemon) {
                 echo ("
-                <tr>
-                    <td>$pokemon[idPokemon]</td>
-                    <td>$pokemon[nomEspece]</td>
-                    <td>$pokemon[description]</td>
-                    <td>$pokemon[typeOne] $pokemon[typeTwo]</td>
-                    <td><img src=$pokemon[urlImg] alt=$pokemon[nomEspece]></td>
-                </tr>
+                    <tr>
+                        <td>$pokemon[idPokemon]</td>
+                        <td>$pokemon[nomEspece]</td>
+                        <td>$pokemon[description]</td>
+                        <td>$pokemon[typeOne] $pokemon[typeTwo]</td>
+                        <td><img src=$pokemon[urlImg] alt=$pokemon[nomEspece]></td>
+                        <td><button type=\"button\">Modifier</button> <button type=\"button\">Supprimer</button></td>
+                    </tr>
                 ");
             }
             ?>            
