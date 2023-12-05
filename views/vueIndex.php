@@ -47,7 +47,7 @@
                         <td>$pokemon[description]</td>
                         <td>$pokemon[typeOne] $pokemon[typeTwo]</td>
                         <td><img src=$pokemon[urlImg] alt=$pokemon[nomEspece]></td>
-                        <td><button type=\"button\">Modifier</button> <button type=\"button\">Supprimer</button></td>
+                        <td><button type=\"button\" href=\"edit-pokemon&idPokemon=$pokemon[idPokemon]\">Modifier</button> <button type=\"button\" href=\"edit-pokemon&idPokemon=$pokemon[idPokemon]\">Supprimer</button></td>
                     </tr>
                 ");
             }
