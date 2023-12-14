@@ -1,4 +1,8 @@
 <?php
+    require_once 'controllers/MainController.php';
+    require_once 'controllers/PokemonController.php';
+    require_once 'controllers/Router/Route/RouteIndex.php';
+
     /**
      * 
      */
@@ -18,12 +22,14 @@
 
         private function createControllerList()
         {
-            $this->ctrlList = ["main" => new MainController()];
+            $this->ctrlList = ["main" => new MainController(),
+                                "pokemon" => new PokemonController()];
         }
 
         private function createRouteList()
         {
-            $this->routeList = ["index" => new RouteIndex($this->ctrlList["main"])];
+            $this->routeList = ["index" => new RouteIndex($this->ctrlList["main"]),
+                                "addPokemon" => new RouteAddPokemon($this->ctrlList["pokemon"])];
         }
 
         /**
