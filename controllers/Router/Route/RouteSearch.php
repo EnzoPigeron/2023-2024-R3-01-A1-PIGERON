@@ -1,18 +1,17 @@
 <?php
+    require_once('controllers/Router/Route.php');
+
     /**
      * 
      */
-    abstract class Route {
-        /**
-         * 
-         */
-        public function __construct() {
-            
+    class RouteSearch extends Route {
+        private MainController $controller;
+
+        public function __construct($controller) {
+            parent::__construct();
+            $this->controller = $controller;
         }
         
-        /**
-         * 
-         */
         public function action($params = [], $method='GET') {
             if($method == 'GET') {
                 $this->get($params);
@@ -33,7 +32,7 @@
         }
 
         private function get($params = []) {
-
+            $this->controller->search();
         }
 
         private function post($params = []) {

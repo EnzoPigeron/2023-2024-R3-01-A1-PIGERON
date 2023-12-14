@@ -9,10 +9,17 @@
         /**
          * 
          */
-        public function displayAddPokemon()
-        {
+        public function displayAddPokemon() {
             $AddPokemonView = new View('AddPokemon');
             $AddPokemonView->generer([]);
+        }
+
+        /**
+         * 
+         */
+        public function displayAddType() {
+            $AddTypeView = new View('AddType');
+            $AddTypeView->generer([]);
         }
     }
 ?>

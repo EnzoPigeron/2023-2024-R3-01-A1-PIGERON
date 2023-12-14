@@ -1,5 +1,5 @@
 <?php
-    require_once('controllers/Router/Route.php');
+    require_once 'controllers/Router/Route.php';
     
     /**
      * 

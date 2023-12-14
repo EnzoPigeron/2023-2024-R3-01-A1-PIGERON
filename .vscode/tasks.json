@@ -6,9 +6,10 @@
         {
             "label": "Start Edge + Fichier Courrant",
            "type": "shell",
-            "command": "MicrosoftEdge",
+            "command": "start",
             "args": [
-                "http://localhost/xampp/htdocs/2023-2024-R3-01-A1-PIGERON/index.php"
+                "MsEdge",
+                "http://localhost/2023-2024-R3-01-A1-PIGERON/index.php"
             
             ],
             "group": {

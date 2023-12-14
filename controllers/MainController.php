@@ -19,5 +19,13 @@
             $indexView = new View('Index');
             $indexView->generer(["nomDresseur" => "Red","listPokemon" => $listPokemon,"first" => $first,"other" => $other]);
         }
+
+        /**
+         * 
+         */
+        public function search() {
+            $searchView = new View('search');
+            $searchView->generer([]);
+        }
     }
 ?>
