@@ -1,7 +1,3 @@
-<?php
-    echo("add type");
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

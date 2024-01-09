@@ -25,12 +25,6 @@
 
         <h1>Pokédex de <?= $nomDresseur ?></h1>
 
-        <p><?php var_dump($listPokemon); ?></p>
-
-        <p><?php var_dump($first); ?></p>
-
-        <p><?php var_dump($other); ?></p>
-
         <table>
             <tr>
                 <th>ID</th>

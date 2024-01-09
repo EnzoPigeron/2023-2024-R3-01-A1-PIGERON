@@ -1,7 +1,3 @@
-<?php
-    echo("add pokemon");
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

@@ -25,8 +25,9 @@
          */
         public function search() {
             $searchView = new View('search');
+            $pokemon = new PokemonManager();
             $listPokemon = $pokemon->getAll();
-            $searchView->generer([]);
+            $searchView->generer(["listPokemon" => $listPokemon]);
         }
 
         /**

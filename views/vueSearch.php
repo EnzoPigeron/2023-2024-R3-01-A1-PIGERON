@@ -1,7 +1,3 @@
-<?php
-    echo("serach pokemon");
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
