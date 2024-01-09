@@ -9,9 +9,9 @@
         /**
          * 
          */
-        public function displayAddPokemon() {
+        public function displayAddPokemon(?string $message = null) {
             $AddPokemonView = new View('AddPokemon');
-            $AddPokemonView->generer([]);
+            $AddPokemonView->generer(["message" => $message]);
         }
 
         /**

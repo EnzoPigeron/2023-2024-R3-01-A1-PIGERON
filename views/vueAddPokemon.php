@@ -6,6 +6,8 @@
     <title>Ajouter un pokemon</title>
 </head>
 <body>
+    <?php if(isset($message)) echo($message); ?>
+    
     <form action="index.php?action=add-pokemon" method="post">
         <fieldset> <legend>Ajouter un pokemon </legend>
             <div>
