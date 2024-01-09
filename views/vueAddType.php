@@ -13,6 +13,7 @@
                 <input type="text" name="Name" required>
             </div>
         </fieldset>
+        <button type="submit">Valider</button>
     </form>  
 </body>
 </html>

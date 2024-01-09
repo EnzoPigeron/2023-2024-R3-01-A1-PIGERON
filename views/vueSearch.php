@@ -22,6 +22,7 @@
                 </select>   
             </div>
         </fieldset>
+        <button type="submit">Rechercher</button>
     </form>  
 </body>
 </html>

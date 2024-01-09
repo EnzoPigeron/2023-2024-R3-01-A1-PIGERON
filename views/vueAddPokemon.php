@@ -6,7 +6,7 @@
     <title>Ajouter un pokemon</title>
 </head>
 <body>
-    <form>
+    <form action="index.php?action=add-pokemon" method="post">
         <fieldset> <legend>Ajouter un pokemon </legend>
             <div>
                 <label for="Name">Nom </label>
@@ -37,6 +37,7 @@
                 <input type="text" name="Img" required>
             </div>
         </fieldset>
+        <button type="submit">Valider</button>
     </form>    
 </body>
 </html>
