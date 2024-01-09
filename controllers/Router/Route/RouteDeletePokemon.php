@@ -2,7 +2,7 @@
     require_once('controllers/Router/Route.php');
     
     /**
-     * 
+     * Route pour la suppression d'un pokemon
      */
     class RouteDeletePokemon extends Route{
 

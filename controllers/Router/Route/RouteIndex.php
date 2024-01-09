@@ -2,7 +2,7 @@
     require_once('controllers/Router/Route.php');
     
     /**
-     * 
+     * Route pour la page d'index
      */
     class RouteIndex extends Route{
 

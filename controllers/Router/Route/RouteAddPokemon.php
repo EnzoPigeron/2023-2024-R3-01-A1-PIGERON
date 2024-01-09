@@ -2,7 +2,7 @@
     require_once 'controllers/Router/Route.php';
     
     /**
-     * 
+     * Route pour l'ajout d'un pokemon
      */
     class RouteAddPokemon extends Route{
 

@@ -35,5 +35,19 @@
             }
             return $pokemon;
         }
+
+        /**
+         * Créé un pokemon
+         * @param Pokemon $pokemon pokemon a créer
+         * @return ?Pokemon renvoie un objet pokemon
+         */
+        public function createPokemon(Pokemon $pokemon) : ?Pokemon {
+            $pokemon->setIdPokemon = $this->execRequest('SELECT LAST_INSERT_ID();');
+
+            $stmt = $this->execRequest('INSERT INTO pokemon VALUES (:idPokemon, :nomEspece,:description,:typeOne,:typeTwo,:urlImg);',
+            [$pokemon->idPokemon,$pokemon->nomEspece,$pokemon->description,$pokemon->typeOne,$pokemon->typeTwo,$pokemon->urlImg]);
+
+            return $pokemon;
+        }
     }
 ?>

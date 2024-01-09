@@ -2,7 +2,7 @@
     require_once('controllers/Router/Route.php');
     
     /**
-     * 
+     * Route pour la modification d'un pokemon
      */
     class RouteEditPokemon extends Route{
 

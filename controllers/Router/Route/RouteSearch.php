@@ -2,7 +2,7 @@
     require_once('controllers/Router/Route.php');
 
     /**
-     * 
+     * Route pour la recherche
      */
     class RouteSearch extends Route {
         private MainController $controller;

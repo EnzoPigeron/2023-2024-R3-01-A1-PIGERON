@@ -3,11 +3,11 @@
     require_once 'models/PokemonManager.php';
 
     /**
-     * 
+     * Controller général
      */
     class MainController {
         /**
-         * Générer la vue
+         * Génére la vue index
          */
         public function Index() : void {
             $pokemon = new PokemonManager();
@@ -21,7 +21,7 @@
         }
 
         /**
-         * 
+         * Génère la vue search
          */
         public function search() {
             $searchView = new View('search');
@@ -31,7 +31,7 @@
         }
 
         /**
-         * 
+         * Génère la vue index après la suppression d'un pokemon
          */
         public function delete(){
             $pokemon = new PokemonManager();

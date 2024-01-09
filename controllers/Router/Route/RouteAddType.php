@@ -2,7 +2,7 @@
     require_once('controllers/Router/Route.php');
 
     /**
-     * 
+     * Route pour l'ajout d'un type
      */
     class RouteAddType extends Route {
         private PokemonController $controller;

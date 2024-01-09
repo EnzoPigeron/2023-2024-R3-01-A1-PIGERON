@@ -5,6 +5,9 @@
     abstract class Model {
         private PDO $db;
 
+        /**
+         * Initialise le model
+         */
         public function __construct() {
             $this->getDB();
         }

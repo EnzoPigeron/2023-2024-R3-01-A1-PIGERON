@@ -1,17 +1,17 @@
 <?php
     /**
-     * 
+     * Modèle d'une route
      */
     abstract class Route {
         /**
-         * 
+         * Initialise une route
          */
         public function __construct() {
             
         }
         
         /**
-         * 
+         * Gère les actions
          */
         public function action($params = [], $method='GET') {
             if($method == 'GET') {

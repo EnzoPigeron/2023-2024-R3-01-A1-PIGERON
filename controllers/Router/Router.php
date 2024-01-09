@@ -9,7 +9,7 @@
     require_once 'controllers/Router/Route/RouteEditPokemon.php';
 
     /**
-     * 
+     * Gère les routes et les controlleurs
      */
     class Router {
         private array $routeList; 
@@ -17,7 +17,7 @@
         private string $action_key;
 
         /**
-         * 
+         * Initialiser le router
          */
         public function __construct($name_of_action_key = "action")
         {
@@ -42,9 +42,11 @@
         }
 
         /**
-         * 
+         * Gère les méthodes
+         * @param $get 
+         * @param $post
          */
-        public function routing($get,$post)
+        public function routing($get, $post)
         {
             if (isset($get["action"])) {
                 $this->routeList[$get["action"]]->action();
