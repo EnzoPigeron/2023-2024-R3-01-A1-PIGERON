@@ -25,7 +25,18 @@
          */
         public function search() {
             $searchView = new View('search');
+            $listPokemon = $pokemon->getAll();
             $searchView->generer([]);
+        }
+
+        /**
+         * 
+         */
+        public function delete(){
+            $pokemon = new PokemonManager();
+            $listPokemon = $pokemon->getAll();
+            $indexView = new View('index');
+            $indexView->generer(["nomDresseur" => "Red","listPokemon" => $listPokemon, "message" => "Pokemon supprimé"]);
         }
     }
 ?>

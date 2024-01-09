@@ -21,6 +21,8 @@
     </header>
     <!-- #contenu -->
     <main id="contenu">
+        <?php if(isset($message)) echo($message); ?>
+
         <h1>Pokédex de <?= $nomDresseur ?></h1>
 
         <p><?php var_dump($listPokemon); ?></p>
@@ -47,7 +49,7 @@
                         <td>$pokemon[description]</td>
                         <td>$pokemon[typeOne] $pokemon[typeTwo]</td>
                         <td><img src=$pokemon[urlImg] alt=$pokemon[nomEspece]></td>
-                        <td><button type=\"button\" href=\"edit-pokemon&idPokemon=$pokemon[idPokemon]\">Modifier</button> <button type=\"button\" href=\"edit-pokemon&idPokemon=$pokemon[idPokemon]\">Supprimer</button></td>
+                        <td><button type=\"button\" href=\"index.php?action=edit-pokemon&idPokemon=$pokemon[idPokemon]\">Modifier</button> <button type=\"button\" href=\"index.php?action=del-pokemon&idPokemon=$pokemon[idPokemon]\">Supprimer</button></td>
                     </tr>
                 ");
             }
