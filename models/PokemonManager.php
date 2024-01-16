@@ -29,11 +29,11 @@
             $res = $this->execRequest('SELECT * FROM pokemon WHERE idPokemon=?',array($idPokemon));
             $res = $res->fetch(PDO::FETCH_ASSOC);
             if ($res) {
-                $pokemon = new Pokemon($res['idPokemon'],$res['nomEspece'],$res['description'],$res['typeOne'],$res['typeTwo'],$res['urlImg']);
+                 $pokemon = new Pokemon($res['idPokemon'],$res['nomEspece'],$res['description'],$res['typeOne'],$res['typeTwo'],$res['urlImg']);
             } else {
                 $pokemon = null;
             }
-            return $pokemon;
+            return $pokemon;           
         }
 
         /**
@@ -42,12 +42,17 @@
          * @return ?Pokemon renvoie un objet pokemon
          */
         public function createPokemon(Pokemon $pokemon) : ?Pokemon {
-            $pokemon->setIdPokemon = $this->execRequest('SELECT LAST_INSERT_ID();');
+            try {
+                $pokemon->setIdPokemon($this->execRequest('SELECT LAST_INSERT_ID();'));
 
-            $stmt = $this->execRequest('INSERT INTO pokemon VALUES (:idPokemon, :nomEspece,:description,:typeOne,:typeTwo,:urlImg);',
-            [$pokemon->idPokemon,$pokemon->nomEspece,$pokemon->description,$pokemon->typeOne,$pokemon->typeTwo,$pokemon->urlImg]);
+                $stmt = $this->execRequest('INSERT INTO pokemon VALUES (:idPokemon, :nomEspece,:description,:typeOne,:typeTwo,:urlImg);',
+                [$pokemon->getIdPokemon(),$pokemon->getNomEspece(),$pokemon->getDescription(),$pokemon->getTypeOne(),$pokemon->getTypeTwo(),$pokemon->getUrlImg()]);
 
-            return $pokemon;
+                return $pokemon;
+            }catch(Exception $e) {
+                die('error ' .$e->getMessage());
+            }
+            
         }
     }
 ?>

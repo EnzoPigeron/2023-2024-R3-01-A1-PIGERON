@@ -31,7 +31,7 @@
         public function addPokemon(array $pokemon) {
             $manager = new PokemonManager();
 
-            $newPokemon = $manager->createPokemon(new Pokemon($pokemon/*null, $pokemon['nomEspece'], $pokemon['description'], $pokemon['typeOne'], $pokemon['typeTwo'], $pokemon['urlImg']*/));  
+            $newPokemon = $manager->createPokemon(new Pokemon(null, $pokemon['nomEspece'], $pokemon['description'], $pokemon['typeOne'], $pokemon['typeTwo'], $pokemon['urlImg']));  
 
             $message = "Echec ajout pokemon";
             if (isset($newPokemon)) $message = "Pokemon ajouté";

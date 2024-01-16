@@ -33,11 +33,11 @@
             try 
             {
                 $data = [
-                    "nomEspece" => parent::getParam($params, "nomEspece",false),
-                    "description" => parent::getParam($params, "description"),
-                    "typeOne" => parent::getParam($params, "typeOne",false),
-                    "typeTwo" => parent::getParam($params, "typeTwo"),
-                    "urlImg" => parent::getParam($params, "urlImg")
+                    "nomEspece" => parent::getParam($params, "nomEspece",true),
+                    "description" => parent::getParam($params, "description", true),
+                    "typeOne" => parent::getParam($params, "typeOne", true),
+                    "typeTwo" => parent::getParam($params, "typeTwo", true),
+                    "urlImg" => parent::getParam($params, "urlImg", true)
                 ];
             } catch (Exception $e)
             {
