@@ -34,7 +34,7 @@
          */
         private function getDB() : PDO {
             if (!isset($this->db)) {
-                $this->db = new PDO("mysql:host=localhost;dbname=pokedex;charset=utf8", "root", "");
+                $this->db = new PDO("mysql:host=localhost;dbname=grp-488_s3_progweb;charset=utf8", "grp-488", "f5sbazoh");
             }
             return $this->db;
         }
