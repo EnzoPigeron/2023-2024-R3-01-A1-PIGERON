@@ -51,8 +51,7 @@
                 return $pokemon;
             }catch(Exception $e) {
                 die('error ' .$e->getMessage());
-            }
-            
+            }          
         }
     }
 ?>

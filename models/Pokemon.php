@@ -10,6 +10,7 @@
         private ?string $typeTwo;
         private ?string $urlImg;
 
+        
         public function __construct(?int $idPokemon, string $nomEspece, ?string $description, string $typeOne, ?string $typeTwo, ?string $urlImg) {
             $this->idPokemon = $idPokemon;
             $this->nomEspece = $nomEspece;
