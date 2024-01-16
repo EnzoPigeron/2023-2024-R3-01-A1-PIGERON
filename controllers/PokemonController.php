@@ -1,5 +1,6 @@
 <?php
     require_once "views/View.php";
+    require_once 'models/pokemon.php';
     require_once 'models/PokemonManager.php';
 
     /**
@@ -10,7 +11,7 @@
          * Affiche la vue d'ajout de pokemon
          * @param ?string $message message a afficher s'il existe
          */
-        public function displayAddPokemon(?string $message = null) {
+        public function displayAddPokemon(?string $message = null) : void {
             $AddPokemonView = new View('AddPokemon');
             $AddPokemonView->generer(["message" => $message]);
         }
@@ -30,13 +31,15 @@
         public function addPokemon(array $pokemon) {
             $manager = new PokemonManager();
 
-            $pokemon = $manager->createPokemon(new Pokemon(null, $pokemon['nomEspece'], $pokemon['description'], $pokemon['typeOne'], $pokemon['typeTwo'], $pokemon['urlImg']));  
+            $newPokemon = $manager->createPokemon(new Pokemon($pokemon/*null, $pokemon['nomEspece'], $pokemon['description'], $pokemon['typeOne'], $pokemon['typeTwo'], $pokemon['urlImg']*/));  
 
             $message = "Echec ajout pokemon";
-            if (isset($pokemon)) $message = "Pokemon ajouté";
+            if (isset($newPokemon)) $message = "Pokemon ajouté";
+
+            $listPokemon = $manager->getAll();
 
             $indexView = new View('Index');
-            $indexView->generer(['nomDresseur' => "Red",'listPokemon' => $manager->getAll(), 'message' => $message]);
+            $indexView->generer(['nomDresseur' => "Red",'listPokemon' => $listPokemon, 'message' => $message]);
         }
     }
 ?>

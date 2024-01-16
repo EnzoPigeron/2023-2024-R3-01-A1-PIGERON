@@ -23,7 +23,7 @@
         /**
          * Génère la vue search
          */
-        public function search() {
+        public function search() : void {
             $searchView = new View('search');
             $pokemon = new PokemonManager();
             $listPokemon = $pokemon->getAll();
@@ -33,7 +33,7 @@
         /**
          * Génère la vue index après la suppression d'un pokemon
          */
-        public function delete(){
+        public function delete() : void {
             $pokemon = new PokemonManager();
             $listPokemon = $pokemon->getAll();
             $indexView = new View('index');

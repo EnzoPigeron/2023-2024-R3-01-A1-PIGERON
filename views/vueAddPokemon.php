@@ -28,7 +28,7 @@
             </div>
             <div>
                 <label for="Type2">Type 2 </label>
-                <select name="Type2" required>
+                <select name="Type2">
                     <option>Feu</option>
 					<option>Eau</option>
 					<option>Plante</option> 
@@ -36,7 +36,7 @@
             </div>
             <div>
                 <label for="Img">Url de l'image </label>
-                <input type="text" name="Img" required>
+                <input type="text" name="Img">
             </div>
         </fieldset>
         <button type="submit">Valider</button>

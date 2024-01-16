@@ -7,18 +7,10 @@
     
 <head>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="public/css/main.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?= $titre ?></title>
-</head>
-    
-    <body>
-    <header>
-        <!-- Menu -->
-        <nav>
-    
-        </nav>
-    </header>
+</head>   
+<body>
     <!-- #contenu -->
     <main id="contenu">
         <?php if(isset($message)) echo($message); ?>
@@ -50,9 +42,5 @@
             ?>            
         </table>
     </main>
-    <footer>
-    
-    </footer>
-    </body>
-    
+</body>    
 </html>   

@@ -30,8 +30,21 @@
 
         private function post($params = [])
         {
+            try 
+            {
+                $data = [
+                    "nomEspece" => parent::getParam($params, "nomEspece",false),
+                    "description" => parent::getParam($params, "description"),
+                    "typeOne" => parent::getParam($params, "typeOne",false),
+                    "typeTwo" => parent::getParam($params, "typeTwo"),
+                    "urlImg" => parent::getParam($params, "urlImg")
+                ];
+            } catch (Exception $e)
+            {
+                $this->controller->displayAddPokemon($e->getMessage());
+            }
             
+            $this->controller->addPokemon($data);
         }
-
     }
 ?>
